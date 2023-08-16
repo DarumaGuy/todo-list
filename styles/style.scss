@@ -1,0 +1,102 @@
+@use "reset";
+@use "variables";
+@use "typography";
+@use "category";
+@use "checkbox";
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.task-group{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+.side-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-end;
+    padding: 2rem 0px;
+    width: 360px;
+    height: 100vh;
+    background-color: var(--dark-purple);
+    justify-content: flex-start;
+}
+
+.progress-card{
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: var(--dark-grey);
+    padding: 0.25rem 0.5rem;
+    
+    &--active{
+        background-color: var(--dark-purple);
+        color: white;
+    }
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories-header{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3.5rem;
+}
+
+
+.add-button{
+    background-color: var(--dark-purple);
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.75rem;
+
+    &:hover{
+        border: 2px solid var(--dark-purple);
+        background-color: var(--white);
+        color: var(--dark-purple);
+    }
+
+    &--white{
+        background-color: var(--white);
+        color: var(--dark-purple);
+    
+        &:hover{
+            border: 2px solid var(--white);
+            background-color: var(--purple);
+            color: var(--white);
+        }
+    }
+}
+
+.list{
+    max-width: 420px;
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+
+.button--delete{
+    background-color: transparent;
+}

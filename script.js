@@ -9,7 +9,7 @@ function removeListItem (id) {
 
 function addListItem () {
     const idNumber = list.childElementCount + 1
-    const text = input.value
+    const text = ""
     const item = document.createElement('li')
     
     item.setAttribute('data-id', idNumber)
@@ -20,7 +20,7 @@ function addListItem () {
     const label = document.createElement('label')
     label.innerHTML = `
         <div class="checkbox__icon-wrapper">
-            <img class="checkbox__icon" src="check-icon.png" alt="">
+            <img class="checkbox__icon" src="./images/check-icon.png" alt="">
         </div>
         <input class="checkbox__text">
     `
@@ -30,7 +30,7 @@ function addListItem () {
 
     const deleteButton = document.createElement('button')
     deleteButton.classList.add('button--delete')
-    deleteButton.innerHTML = '<img class="checkbox__icon checkbox__icon--delete" src="delete-icon.png"/>'
+    deleteButton.innerHTML = '<img class="checkbox__icon checkbox__icon--delete" src="./images/delete-icon.png"/>'
     deleteButton.addEventListener('click', () => removeListItem(idNumber))
 
     label.appendChild(deleteButton)
